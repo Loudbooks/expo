@@ -41,9 +41,7 @@ struct UpdatesListView: View {
         }
       }
     }
-    #if !os(tvOS)
-    .background(Color(.systemGroupedBackground))
-    #endif
+    .background(Color.expoSystemColors.systemGroupedBackground.color)
     .onChange(of: filterByCompatibility) { _ in
       applyFilters()
     }

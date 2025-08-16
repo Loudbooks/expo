@@ -30,9 +30,7 @@ struct HeaderView: View {
       } label: {
         ZStack {
           Circle()
-          #if !os(tvOS)
-            .fill(Color(.systemGray6))
-          #endif
+            .fill(Color.expoSystemColors.systemGray6.color)
             .frame(width: 36, height: 36)
 
           Image(systemName: "xmark")
